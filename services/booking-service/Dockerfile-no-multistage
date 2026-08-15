@@ -1,0 +1,25 @@
+FROM ibm-semeru-runtimes:open-8-jdk-noble
+WORKDIR /app
+
+# copying scripts
+COPY wait-for-it.sh docker-entrypoint.sh ./
+RUN set -xe && \
+	chmod 555 wait-for-it.sh docker-entrypoint.sh
+
+# copying and downloading dependencies
+COPY .mvn .mvn
+COPY pom.xml mvnw ./
+RUN set -xe && \
+	./mvnw dependency:go-offline -B
+
+# building app
+COPY src src
+RUN set -xe && \
+	./mvnw package -DskipTests -B && \
+	mv target/*.jar target/app.jar
+
+ENV WAIT_SEC=5
+
+ENTRYPOINT ["./docker-entrypoint.sh"]
+
+CMD ./wait-for-it.sh ${POSTGRES_HOST}:${POSTGRES_PORT} -s -t ${WAIT_SEC} -- java -jar target/app.jar
