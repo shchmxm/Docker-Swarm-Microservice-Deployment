@@ -13,7 +13,6 @@ This project provided hands-on experience with the basic principles of container
 - Docker
 - Docker Swarm
 - Docker Hub
-- Java Spring Boot
 - PostgreSQL
 - RabbitMQ
 - NGINX
