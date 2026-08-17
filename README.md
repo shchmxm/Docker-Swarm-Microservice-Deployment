@@ -1,26 +1,41 @@
-## Docker Swarm Microservice Deployment
+# Docker Swarm Microservice Deployment
 
-Project demonstrates the deployment of a Java Spring Boot microservice application on a three-node Docker Swarm cluster.
+[🇷 Русская версия](README_RU.md)
 
-The infrastructure is provisioned with Vagrant, and the application stack includes PostgreSQL, RabbitMQ, and NGINX.
+This project demonstrates the deployment of a Java Spring Boot microservice application on a three-node Docker Swarm cluster. Each microservice is containerized using a dedicated Dockerfile, and the resulting images are published to Docker Hub for deployment.
 
-The repository focuses on container orchestration, service scaling, networking, and automated deployment in a reproducible local environment.
+The infrastructure is provisioned with Vagrant. The application stack includes PostgreSQL, RabbitMQ, and NGINX.
+
+This project provided hands-on experience with the basic principles of container orchestration, service scaling, overlay networking, and automated deployment in a reproducible local environment. 
 
 ## Technologies
 
+- Docker
 - Docker Swarm
+- Docker Hub
 - Java Spring Boot
 - PostgreSQL
 - RabbitMQ
 - NGINX
-- Postman / Newman
+- Postman/Newman
 - Portainer
 - Vagrant
 - Bash
 
+## Implementation Highlights
+
+- Created a dedicated Dockerfile for each microservice
+- Built and published Docker images to Docker Hub
+- Provisioned the environment using Vagrant
+- Created a Docker Compose file for the application stack
+- Configured NGINX as a reverse proxy
+- Deployed the application in a three-node Docker Swarm cluster
+- Added script for API testing with Postman/Newman
+- Added Portainer stack for Swarm cluster management
+
 ## Architecture
 
-**Components**
+**Service topology**
 
 ```mermaid
 graph TD
@@ -32,7 +47,7 @@ graph TD
     end
 ```
 
-**Microservice application architecture**
+**Microservices architecture**
 
 ```mermaid
 flowchart TD
@@ -117,7 +132,7 @@ Report <---> StatisticsDB
 
 ### Usage
 
-**Requirements:**
+**Requirements**
 
 - At least 4 GB of RAM
 - VirtualBox
