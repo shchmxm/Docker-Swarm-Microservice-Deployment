@@ -13,7 +13,6 @@
 - Docker
 - Docker Swarm
 - Docker Hub
-- Java Spring Boot
 - PostgreSQL
 - RabbitMQ
 - NGINX
