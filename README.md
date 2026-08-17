@@ -130,13 +130,15 @@ Report <---> StatisticsDB
 └───────────────────────────────┘
 ```
 
-### Usage
+## Usage
 
 **Requirements**
 
 - At least 4 GB of RAM
 - VirtualBox
 - Vagrant
+
+**Step-by-step deployment**
 
 1. Clone the repository and navigate to the project directory.
 
