@@ -1,6 +1,6 @@
 # Docker Swarm Microservice Deployment
 
-[🇷 Русская версия](README_RU.md)
+[🇷🇺 Русская версия](README_RU.md)
 
 This project demonstrates the deployment of a Java Spring Boot microservice application on a three-node Docker Swarm cluster. Each microservice is containerized using a dedicated Dockerfile, and the resulting images are published to Docker Hub for deployment.
 
