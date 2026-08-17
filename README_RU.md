@@ -1,6 +1,6 @@
 # Docker Swarm Microservice Deployment
 
-[🇬 English version](README.md)
+[🇬🇧 English version](README.md)
 
 Проект демонстрирует развертывание микросервисного Java Spring Boot-приложения в Docker Swarm кластере из трёх виртуальных машин. Для каждого микросервиса написан Dockerfile, и итоговый образ загружен в Docker Hub.
 
