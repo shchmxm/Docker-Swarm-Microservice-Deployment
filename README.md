@@ -6,8 +6,6 @@ This project demonstrates the deployment of a Java Spring Boot microservice appl
 
 The infrastructure is provisioned with Vagrant. The application stack includes PostgreSQL, RabbitMQ, and NGINX.
 
-This project provided hands-on experience with the basic principles of container orchestration, service scaling, overlay networking, and automated deployment in a reproducible local environment. 
-
 ## Technologies
 
 - Docker
@@ -133,9 +131,9 @@ Report <---> StatisticsDB
 
 **Requirements**
 
-- At least 4 GB of RAM
-- VirtualBox
-- Vagrant
+ - At least 8 GB of RAM
+ - [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+ - [Vagrant](https://developer.hashicorp.com/vagrant/install)
 
 **Step-by-step deployment**
 
